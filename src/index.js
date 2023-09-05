@@ -4,15 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import ThemeProvider from "./context/ThemeContext";
-import { ClimateProvider } from "./context/ClimateContext";
+import ClimateProvider from "./context/ClimateContext";
 function Root() {
   return (
     <BrowserRouter>
-      <ThemeProvider>
-        <ClimateProvider>
+      <ClimateProvider>
+        <ThemeProvider>
           <App />
-        </ClimateProvider>
-      </ThemeProvider>
+        </ThemeProvider>
+      </ClimateProvider>
     </BrowserRouter>
   );
 }
