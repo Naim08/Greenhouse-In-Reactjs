@@ -7,21 +7,15 @@ import ClimateStats from "./ClimateStats";
 import { useTheme } from "../../context/ThemeContext";
 
 function Greenhouse() {
-  const { themeName, setThemeName } = useTheme();
-  console.log("themeName", themeName);
+  const { themeName } = useTheme();
+
   const dayOrNight = themeName === "day" ? dayImage : nightImage;
   return (
     <section>
       <div>
-        {themeName === "day" ? (
-          <img className="greenhouse-img" src={dayImage} alt="greenhouse" />
-        ) : (
-          <img className="greenhouse-img" src={nightImage} alt="greenhouse" />
-        )}
+        <img className="greenhouse-img" src={dayOrNight} alt="greenhouse" />
       </div>
-      <LightSwitch
-        onClick={() => setThemeName(themeName === "day" ? "night" : "day")}
-      />
+      <LightSwitch />
       <ClimateStats />
     </section>
   );
