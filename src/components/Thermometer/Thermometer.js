@@ -1,6 +1,6 @@
 import ReactSlider from "react-slider";
-import './Thermometer.css';
-
+import "./Thermometer.css";
+import { useClimate } from "../../context/ClimateContext";
 function Thermometer() {
   return (
     <section>
