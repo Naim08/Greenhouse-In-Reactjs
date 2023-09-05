@@ -1,15 +1,18 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
-import './Navigation.css';
+import "./Navigation.css";
 
 function Navigation() {
   return (
     <nav>
-      <NavLink exact to="/">Greenhouse</NavLink>
+      <NavLink exact to="/">
+        Greenhouse
+      </NavLink>
       <NavLink to="/thermometer">Thermometer</NavLink>
+      <NavLink to="/thermostat">ThermoStat</NavLink>
       <NavLink to="/hygrometer">Hygrometer</NavLink>
     </nav>
-  )
+  );
 }
 
 export default Navigation;

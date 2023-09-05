@@ -9,10 +9,18 @@ export const useClimate = () => useContext(ClimateContext);
 export default function ClimateProvider({ children }) {
   const [temperature, setTemperature] = useState(50);
   const [humidity, setHumidity] = useState(40);
+  const [desiredTemperature, setDesiredTemperature] = useState(50);
 
   return (
     <ClimateContext.Provider
-      value={{ temperature, humidity, setTemperature, setHumidity }}
+      value={{
+        temperature,
+        humidity,
+        setTemperature,
+        setHumidity,
+        desiredTemperature,
+        setDesiredTemperature,
+      }}
     >
       {children}
     </ClimateContext.Provider>

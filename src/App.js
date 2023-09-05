@@ -3,6 +3,7 @@ import Greenhouse from "./components/Greenhouse";
 import Navigation from "./components/Navigation";
 import Thermometer from "./components/Thermometer";
 import Hygrometer from "./components/Hygrometer";
+import Thermostat from "./components/Thermometer/ThermoStat";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Switch>
         <Route path="/thermometer">
           <Thermometer />
+        </Route>
+        <Route path="/thermostat">
+          <Thermostat />
         </Route>
         <Route path="/hygrometer">
           <Hygrometer />
